@@ -26,8 +26,7 @@ CREATE TABLE IF NOT EXISTS public.covid_deaths
     weekly_icu_admissions integer,
     weekly_icu_admissions_per_million integer,
     weekly_hosp_admissions integer,
-    weekly_hosp_admissions_per_million integer,
-    PRIMARY KEY (iso_code)
+    weekly_hosp_admissions_per_million integer
 )
 
 TABLESPACE pg_default;
