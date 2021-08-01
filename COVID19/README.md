@@ -23,6 +23,5 @@ https://ourworldindata.org/covid-deaths
 - Temp Tables 
 
 # Tableau Dashboard
-![Tableau Dashboard]("C:\Users\Dave Roppo\Desktop\covid_dashboard.PNG"?raw=true "Tableau Dashboard")
-
-###[Link To Full Dashboard](https://public.tableau.com/app/profile/dave.roppo/viz/COVID-19Dashboard_16278532329480/Dashboard1)
+![covid_dashboard](https://user-images.githubusercontent.com/58571770/127786054-b9133a77-d417-4c21-86ec-5b3d73dedc6a.PNG)
+[Link To Full Dashboard](https://public.tableau.com/app/profile/dave.roppo/viz/COVID-19Dashboard_16278532329480/Dashboard1)
