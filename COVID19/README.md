@@ -21,3 +21,5 @@ https://ourworldindata.org/covid-deaths
 - Window Functions
 - Convert Data Types
 - Temp Tables 
+
+# Tableau Visualizations
