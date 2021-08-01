@@ -6,7 +6,7 @@ A data exploration project analyzing COVID-19 data from ourworldindata.org to di
   - Countries With Highest Death Count
   - Percentage of Population Vaccinated 
   ## Tools Used
-  PostgreSQL, pgAdmin4, Tableau
+  PostgreSQL, pgAdmin4, Tableau, Excel
 
 # Dataset
 https://ourworldindata.org/covid-deaths
