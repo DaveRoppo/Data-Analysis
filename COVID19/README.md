@@ -1,4 +1,10 @@
 # About
+SQL data exploration project analyzing COVID-19 data from ourworldindata.org to answer questions such as:
+  - COVID-19 Mortality Rates
+  - Percentage of Population Infected  
+  - Countries With Highest Infection Rates
+  - Countries With Highest Death Count
+  - Percentage of Population Vaccinated 
 
 # Dataset
 https://ourworldindata.org/covid-deaths
