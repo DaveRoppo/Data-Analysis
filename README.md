@@ -1,6 +1,6 @@
 # Data-Analysis
 
-A compilation of data analyis projects using PostgreSQL, Tableau, and Excel, Python.
+A compilation of data analyis projects using PostgreSQL, Tableau, IBM Cognos, Excel, Python.
 
 ## Projects 
 
