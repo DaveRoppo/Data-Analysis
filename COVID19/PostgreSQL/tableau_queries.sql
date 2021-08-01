@@ -9,7 +9,7 @@ WHERE
 ORDER BY
 	1,2;
 
--- 2. 
+-- 2. COVID-19 Total Death Count by Continent
 
 SELECT
   location, SUM(cast(new_deaths as int)) as total_death_count
@@ -23,7 +23,7 @@ ORDER BY
   total_death_count desc;
 
 
--- 3.
+-- 3. COVID-19 Infection Rate By Country 
 
 SELECT
   location, population, MAX(total_cases) as highest_infection_count,  Max((total_cases/population))*100 as percent_population_infected
@@ -35,7 +35,7 @@ ORDER BY
   percent_population_infected desc;
 
 
--- 4.
+-- 4. COVID-19 Infection Rate By Country (Daily)
 
 SELECT
   location, population, date, MAX(total_cases) as highest_infection_count,  Max((total_cases/population))*100 as percent_population_infected
