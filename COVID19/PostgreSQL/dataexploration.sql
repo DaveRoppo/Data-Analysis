@@ -1,6 +1,5 @@
 -- COVID19 DATA EXPLORATION WITH POSTGRESQL
 -- 
-
 SELECT 
 	location, date, total_cases, new_cases, total_deaths, population
 FROM
@@ -76,3 +75,133 @@ GROUP BY
 	location
 ORDER BY
 	total_death_count desc;
+	
+-- GLOBAL NUMBERS
+
+
+SELECT 
+	date, SUM(new_cases) as total_cases, SUM(total_deaths) as total_deaths, SUM(new_deaths)/SUM(new_cases)*100 as death_percentage
+FROM
+	public.covid_deaths
+WHERE
+	continent is NOT NULL
+GROUP BY 
+		date
+ORDER BY
+	1,2;
+
+-- Total COVID World Death Percentage
+
+SELECT 
+	SUM(new_cases) as total_cases, SUM(total_deaths) as total_deaths, SUM(new_deaths)/SUM(new_cases)*100 as death_percentage
+FROM
+	public.covid_deaths
+WHERE
+	continent is NOT NULL
+ORDER BY
+	1,2;
+	
+-- Join 
+-- Total Population vs Vaccinations 
+-- Rolling Count of Total People Vaccinated By Country
+
+SELECT 
+	covid_deaths.continent, covid_deaths.location, covid_deaths.date, covid_deaths.population, covid_vaccinations.new_vaccinations,
+	SUM(covid_vaccinations.new_vaccinations) OVER (PARTITION BY covid_deaths.location ORDER BY covid_deaths.location, covid_deaths.date)
+	as rolling_count_vaccinated
+FROM
+	public.covid_deaths
+JOIN
+	public.covid_vaccinations
+ON
+	public.covid_deaths.location = public.covid_vaccinations.location
+AND
+	public.covid_deaths.date = public.covid_vaccinations.date
+WHERE
+	covid_deaths.continent is NOT NULL
+ORDER BY
+	2,3;
+	
+-- CTE
+
+WITH 
+	pop_vs_vacc (continent, location, date, population, new_vaccinations, rolling_count_vaccinated)
+AS
+(SELECT 
+	covid_deaths.continent, covid_deaths.location, covid_deaths.date, covid_deaths.population, covid_vaccinations.new_vaccinations,
+	SUM(covid_vaccinations.new_vaccinations) OVER (PARTITION BY covid_deaths.location ORDER BY covid_deaths.location, covid_deaths.date)
+	as rolling_count_vaccinated
+FROM
+	public.covid_deaths
+JOIN
+	public.covid_vaccinations
+ON
+	public.covid_deaths.location = public.covid_vaccinations.location
+AND
+	public.covid_deaths.date = public.covid_vaccinations.date
+WHERE
+	covid_deaths.continent is NOT NULL
+ORDER BY
+	2,3)
+	
+SELECT 
+	*, (rolling_count_vaccinated/population)*100
+FROM pop_vs_vacc;
+
+-- Temp Table
+
+/*CREATE TEMP TABLE
+	percent_pop_vaccinated (
+	continent nvarchar(255),
+	location nvarchar(255),
+	date date,
+	population numeric(50),
+	new_vaccinations numeric(50),
+	rolling_count_vaccinated numeric(50))
+INSERT INTO
+	percent_pop_vaccinated
+SELECT 
+	covid_deaths.continent, covid_deaths.location, covid_deaths.date, covid_deaths.population, covid_vaccinations.new_vaccinations,
+	SUM(covid_vaccinations.new_vaccinations) OVER (PARTITION BY covid_deaths.location ORDER BY covid_deaths.location, covid_deaths.date)
+	as rolling_count_vaccinated
+FROM
+	public.covid_deaths
+JOIN
+	public.covid_vaccinations
+ON
+	public.covid_deaths.location = public.covid_vaccinations.location
+AND
+	public.covid_deaths.date = public.covid_vaccinations.date
+WHERE
+	covid_deaths.continent is NOT NULL
+ORDER BY
+	2,3
+	
+SELECT 
+	*, (rolling_count_vaccinated/population)*100
+FROM
+	percent_pop_vaccinated;
+	*/
+	
+-- View To Store Data For Visualization
+
+CREATE VIEW
+	percent_pop_vaccianted 
+AS
+SELECT 
+	covid_deaths.continent, covid_deaths.location, covid_deaths.date, covid_deaths.population, covid_vaccinations.new_vaccinations,
+	SUM(covid_vaccinations.new_vaccinations) OVER (PARTITION BY covid_deaths.location ORDER BY covid_deaths.location, covid_deaths.date)
+	as rolling_count_vaccinated
+FROM
+	public.covid_deaths
+JOIN
+	public.covid_vaccinations
+ON
+	public.covid_deaths.location = public.covid_vaccinations.location
+AND
+	public.covid_deaths.date = public.covid_vaccinations.date
+WHERE
+	covid_deaths.continent is NOT NULL
+ORDER BY
+	2,3;
+
