@@ -12,6 +12,7 @@ https://ourworldindata.org/covid-deaths
 # SQL Skills Used
 - Create Database
 - Create & Alter Tables
+- Import CSV dataset
 - Joins 
 - Aggregate Functions
 - Create Views
