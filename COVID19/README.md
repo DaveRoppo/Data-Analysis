@@ -1,2 +1,14 @@
+# About
+
+# Dataset
 https://ourworldindata.org/covid-deaths
-Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
+
+# SQL Skills Used
+- Create Database
+- Create & Alter Tables
+- Joins 
+- Aggregate Functions
+- Create Views
+- Window Functions
+- Convert Data Types
+- Temp Tables 
