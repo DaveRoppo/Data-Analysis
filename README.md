@@ -2,6 +2,6 @@
 
 A compilation of data analyis projects using PostgreSQL, Tableau, and Python.
 
-# Projects 
+## Projects 
 
 ### [COVID-19 Project](https://github.com/DaveRoppo/Data-Analysis/tree/main/COVID19)
