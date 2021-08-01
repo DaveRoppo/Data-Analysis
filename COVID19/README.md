@@ -22,4 +22,7 @@ https://ourworldindata.org/covid-deaths
 - Convert Data Types
 - Temp Tables 
 
-# Tableau Visualizations
+# Tableau Dashboard
+![Tableau Dashboard]("C:\Users\Dave Roppo\Desktop\covid_dashboard.PNG"?raw=true "Tableau Dashboard")
+
+###[Link To Full Dashboard](https://public.tableau.com/app/profile/dave.roppo/viz/COVID-19Dashboard_16278532329480/Dashboard1)
