@@ -1,9 +1,8 @@
 # About
 A data exploration and visualization project analyzing Car Sales data from the [IBM Accelerator Catalog](https://community.ibm.com/accelerators/?context=analytics\&type=Data\&product=Cognos%20Analytics\&industry=Automotive ) to display the following:
-  - 'Quantity Sold' by 'Dealer ID'
-  - 'Profit' by 'Date' and 'Model'  
-  - 'Profit' by 'Year' and 'Dealer ID'
-  - 'Sum of Profits' for 'Hudson model cars' by 'Dealer ID'
+  - Quantity Sold by Dealer ID
+  - Profit by Date and Model  
+  - Profit by Year and Dealer ID
   - Recalls Per Month By Model
   - Customer Sentiment 
 
