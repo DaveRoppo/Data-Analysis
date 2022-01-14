@@ -2,8 +2,8 @@
 # About
 A data exploration project scraping Ethereum network data from etherscan.io and alternative.me to display the following:
   - ETH/USD price
-  - Gas Prices
-  - Crypto Fear & Greed Index
+  - Ethereum Gas Price
+  - Crypto Fear & Greed Index Status 
   
   ## Tools Used
   Jupyter Notebook, Python, Tableau, Excel
@@ -22,5 +22,9 @@ Still collecting
 - smtplib
 
 # Tableau Dashboard
+
+coming soon
+
+# Excel Dashboard
 
 coming soon
