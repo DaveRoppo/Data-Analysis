@@ -1,6 +1,6 @@
 
 # About
-A data exploration project scraping the following Ethereum network data every 5 minutes from etherscan.io and alternative.me:
+A data exploration project scraping the following Ethereum network data from etherscan.io and alternative.me:
   - ETH/USD price
   - Ethereum Gas Price (gwei)
   - Crypto Fear & Greed Index Status 
