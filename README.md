@@ -4,6 +4,8 @@ A compilation of data analyis projects using PostgreSQL, Tableau, IBM Cognos, Ex
 
 ## Projects 
 
+### [Ethereum Tracker](https://github.com/DaveRoppo/Data-Analysis/tree/main/COVID19)
+
 ### [COVID-19 Data Exploration & Visualization](https://github.com/DaveRoppo/Data-Analysis/tree/main/COVID19)
 
 ### [Housing Market Data Cleaning](https://github.com/DaveRoppo/Data-Analysis/tree/main/Housing%20Data)
