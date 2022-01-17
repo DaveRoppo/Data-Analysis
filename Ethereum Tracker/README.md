@@ -9,7 +9,8 @@ Using the data above, I will create visualization dashboards with Excel and Tabl
   - ETH/USD & ETH gas (gwei) prices over time
   - Crypto Fear & Greed Index Status over time 
   - Correlation between ETH/USD price and Crypto Fear & Greed Index Status
-  - Correlation between ETH Gas Price and Crypto Fear & Greed Index Status
+  - Correlation between ETH Gas price and Crypto Fear & Greed Index Status
+  - Determine when ETH Gas prices are the cheapest
   
   ## Tools Used
   Jupyter Notebook, Python, Tableau, Excel
