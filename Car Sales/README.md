@@ -21,4 +21,8 @@ https://community.ibm.com/accelerators/?context=analytics\&type=Data\&product=Co
 # Excel Dashboard
 ![carsalesdash](https://user-images.githubusercontent.com/58571770/127944163-3cde87b9-e487-4676-9649-11df19a3bca1.PNG)
 
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/DaveRoppo/Cyber-Security/blob/main/LICENSE) file for details
+
+## Acknowlegements
 
