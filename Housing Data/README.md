@@ -17,3 +17,8 @@ A data cleaning project using housing market data.
 - Update Fields
 - Delete Blank/Unused Columns
 - Standardizing Format
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/DaveRoppo/Cyber-Security/blob/main/LICENSE) file for details
+
+## Acknowlegements
